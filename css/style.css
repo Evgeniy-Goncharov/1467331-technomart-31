@@ -13,8 +13,8 @@
     font-weight: normal;
     font-style: normal;
 }
-
-
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+/* Цвета */
 
 :root {
     --basic-white: white;
@@ -30,6 +30,7 @@
     --basic-cost: #a9a9a9;
     --basic-shadow: #405069;
     --basic-social: rgba(33, 42, 58, 1);
+    --basic-sorting-bg: #f7f3ec;
     --special-yellow: #FFBF47;
     --special-blue: #3BBCE3;
     --special-purple: #DC91D8;
@@ -38,8 +39,11 @@
     --accent-red: #CA2C37;
     --accent-active: rgba(255, 255, 255, 0.5);
     --special-red: #BA2732;
-    
+    --basic-filter-border: #e5e5e5;
 }
+
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* Главная страница */
 
 body {
     margin: 0;
@@ -82,7 +86,7 @@ body {
     border: none;
 }
 
-.order-info {
+.order-info, .main-nav-list, .promo-products-list, .promotions-list, .products-list, .popular-partners-list, .services-list, .delivery-list, .site-navigation-list, .links-list, .social-list, .breadcrumbs, .sorting-list, .pagination-list, .filter-form, .filter-manufacturer-list, .filter-power-list {
     list-style: none;
 }
 
@@ -128,7 +132,7 @@ body {
     border: 3px solid var(--basic-white);
 }
 
-.login, .registration {
+.login, .registration, .user {
     color: var(--basic-black);
     background-color: var(--basic-white);
     font-size: 21px;
@@ -150,9 +154,7 @@ body {
     background-color: var(--basic-blue-gray);
 }
 
-.main-nav-list {
-    list-style: none;
-}
+
 
 .main-nav-list li {
     text-align: center;
@@ -174,15 +176,11 @@ body {
     opacity: 0.5;
 }
 
-/* Секция с товарами, акциями и галереей */
+/* Промо-секция с товарами, акциями и галереей */
 
-.products, .gallery, .promotions {
+.promo-products, .gallery, .promotions {
     font-family: "Cuprum", "Arial", sans-serif;
     color: var(--basic-white);
-}
-
-.products-list, .promotions-list {
-    list-style: none;
 }
 
 .materials, .delivery {
@@ -201,7 +199,7 @@ body {
     background-color: var(--special-green);
 }
 
-.products-list-item h3, .promotions-list-item h3 {
+.promo-products-list-item h3, .promotions-list-item h3 {
     font-size: 24px;
     line-height: 30px;
     font-weight: bold;
@@ -226,15 +224,15 @@ body {
     background-color: var(--special-red);
 }
 
-.button-products, .button-promotions {
+.button-promo-products, .button-promotions {
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-.button-products:hover, .button-promotions:hover {
+.button-promo-products:hover, .button-promotions:hover {
     background-color: rgba(197, 197, 197, 0.3);
 }
 
-.button-products:active, .button-promotions:active {
+.button-promo-products:active, .button-promotions:active {
     background-color: rgba(169, 169, 169, 0.3);
 }
 
@@ -268,27 +266,32 @@ body {
     color: var(--basic-blue-gray)
 }
 
-.popular-products-list {
-    list-style: none;
+.products-list {
+    font-family: "PT-Sans", "Arial", sans-serif;
+    text-transform: none;
 }
 
-.popular-products-list-item {
-    font-family: "PT-Sans", "Arial", sans-serif;
+.products-list-item {
     border: 1px solid var(--basic-border);
 }
 
-.popular-products-list-item a {
+.products-list-item h3 {
     font-size: 18px;
     line-height: 20px;
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     color: var(--basic-black);
+}
+
+.products-list-item a {
     text-decoration: none;
 }
 
-.popular-products-list-item p {
+.products-list-item p {
     font-size: 17px;
     line-height: 18px;
+    font-style: normal;
+    font-weight: blold;
 }
 
 .product-cost-deleted {
@@ -298,15 +301,10 @@ body {
 
 .product-cost-current {
     color: var(--basic-white);
-    text-decoration-line: none;
     background-color: var(--basic-red);
 }
 
 /* Секция "Популярные производители" */
-
-.popular-partners-list {
-    list-style: none;
-}
 
 .popular-partners-list-item {
     width: 220px;
@@ -334,10 +332,6 @@ body {
     color: var(--basic-black);
 }
 
-.services-list {
-    list-style: none;   
-}
-
 .services-list-item {
     color: var(--basic-white);
     font-size: 21px;
@@ -354,7 +348,14 @@ body {
     color: var(--basic-blue-gray);
     background-color: var(--basic-white); 
     box-shadow: 0px 1px 0px var(--basic-white);
-    
+}
+
+.services-list-item-active:hover {
+    background-color: var(--basic-white); 
+}
+
+.services-list-item-active:active {
+    background-color: var(--basic-white); 
 }
 
 .services-delivery-header {
@@ -364,10 +365,6 @@ body {
     font-style: normal;
     font-weight: normal;
     color: var(--basic-blue-gray);
-}
-
-.delivery-list {
-    list-style: none;
 }
 
 .delivery-list-item {
@@ -395,10 +392,6 @@ body {
     text-decoration: none;
 }
 
-.site-navigation-list {
-    list-style: none;
-}
-
 .site-navigation-list-item a {
     color: var(--basic-background);
     text-decoration: none;
@@ -413,10 +406,6 @@ body {
     text-decoration: none;
 }
 
-.links-list {
-    list-style: none;
-}
-
 .links-list-item a {
     color: var(--basic-gold);
     text-decoration: none;
@@ -426,10 +415,6 @@ body {
     background-color: var(--basic-dark-blue-gray);
     font-size: 16px;
     line-height: 18px;
-}
-
-.social-list {
-    list-style: none;
 }
 
 .social-button {
@@ -454,4 +439,152 @@ body {
 .mail:active, .designed:active {
     color: var(--basic-red);
     text-decoration: none;
+}
+
+.red {
+    background-color: var(--basic-red);
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+/* Каталог */
+
+.catalog-main {
+    font-family: "PT-Sans", "Arial", sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--basic-black);
+    text-transform: uppercase;
+}
+
+.user-info {
+    text-align: center;
+}
+
+.user-link {
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--basic-blue-gray);
+    text-decoration: none;
+}
+
+.user-link:hover {
+    color: var(--basic-red);
+}
+
+.user-link:active {
+    color: var(--basic-greylight);
+}
+
+/* Хлебные крошки */
+
+.breadcrumbs {
+    font-family: "PT-Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--basic-black);
+    text-transform: uppercase;
+}
+
+.breadcrumbs a {
+    color: var(--basic-black);
+    text-decoration: none;
+}
+
+/* Заголовок секции */
+
+.section-top-blue {
+    background-color: var(--basic-background);
+}
+
+/* Сортировка */
+
+
+
+.sorting {
+    background-color: var(--basic-sorting-bg);
+}
+
+.sorting h2, .filter h2 {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+ .sorting-list-item {
+    opacity: 0.3;
+    text-decoration: underline dotted var(--basic-red);
+ }
+
+ .sorting-list-item-up, .sorting-list-item-down {
+    text-decoration: none;
+ }
+
+ .sorting-list-item-active {
+    color: var(--basic-red);
+    opacity: 1;
+    text-decoration: none;
+ }
+
+/* Пагинация */
+
+.pagination-list-item {
+    text-align: center;
+    border: 1px solid var(--basic-border);
+    border-radius: 2px;
+}
+
+.pagination-list a {
+    color: var(--basic-black);
+    text-decoration: none;
+}
+
+.pagination-list-item-active {
+    background-color: var(--basic-red);
+}
+
+.pagination-list-item-active a {
+    color: var(--basic-white);
+}
+
+/* aside "Фильтр" */
+
+.filter h2 {
+    background-color: var(--basic-sorting-bg);
+}
+
+.filter-form {
+    font-style: "PT-Sans", "Arial", sans-serif;
+    font-size: 15px;
+    line-height: 19px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.filter-cost, .filter-manufacturer, .filter-power {
+    border: none;
+}
+
+.filter-cost, .filter-manufacturer {
+    border-bottom: 1px solid var(--basic-filter-border);
+}
+
+.filter-cost legend, .filter-manufacturer legend, .filter-power legend {
+    font-size: 17px;
+    line-height: 30px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.show {
+    text-transform: uppercase;
+    background-color: var(--basic-white);
+    border: 1px solid var(--basic-filter-border);
+}
+
+.product-detail-caption {
+    font-size: 13px;
+    line-height: 24px;
+    text-transform: none;
+    background-color: var(--basic-background);
 }
