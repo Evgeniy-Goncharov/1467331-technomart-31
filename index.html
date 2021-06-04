@@ -15,20 +15,23 @@
 <body class="page-body">
   <header class="main-header">
     <div class="header-top">
-      <a class="main-header-logo"><img src="img/logo.png" width="220" height="47" alt="Техномарт"></a>
+      <div class="header-grid container">
+        <a class="main-header-logo"><img src="img/logo.png" width="220" height="47" alt="Техномарт"></a>
 
-      <form class="search" action="https://echo.htmlacademy.ru" method="GET">
-        <label>Поиск:<input type="search" name="main-search"></label><br>
-      </form>
+        <form class="search" action="https://echo.htmlacademy.ru" method="GET">
+          <label>Поиск:<input type="search" name="main-search"></label><br>
+        </form>
 
-      <ul class="order-info">
-        <li class="order-info-item"><a href="#">Закладки <span>0</span></a></li>
-        <li class="order-info-item"><a href="#">Корзина <span>0</span></a></li>
-      </ul>
-      <a class="checkout" href="#">Оформить заказ</a>
+        <ul class="order-info">
+          <li class="order-info-item"><a href="#">Закладки <span>0</span></a></li>
+          <li class="order-info-item"><a href="#">Корзина <span>0</span></a></li>
+          <li class="order-info-item checkout"><a href="#">Оформить заказ</a></li>
+        </ul>
+
+      </div>
     </div>
 
-    <div class="header-bottom">
+    <div class="header-bottom container">
       <h1 class="header-page-caption">Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</h1>
 
       <h2 class="visually-hidden">Как нас найти</h2>
@@ -48,7 +51,7 @@
           <li><a href="#">Компания</a></li>
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="#">Новости</a></li>
-          <li><a href="#">Спецпредложение</a></li>
+          <li><a href="#">Спецпредложения</a></li>
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
@@ -59,7 +62,7 @@
 
   <main>
 
-    <section class="promo-products">
+    <section class="promo-products container">
       <h2 class="visually-hidden">Товары</h2>
       <ul class="promo-products-list">
         <li class="promo-products-list-item materials">
@@ -79,36 +82,38 @@
       </ul>
     </section>
 
-    <section class="gallery">
-      <h2 class="visually-hidden">Галерея</h2>
-      <figure class="gallery-content">
-        <figcaption>
-          <h3>Перфораторы</h3>
-          <p>Настоящие мужские игрушки</p>
-        </figcaption>
-        <img src="img/gallery/perfs.jpg" alt="Строитель с большим перфоратором BOSH" width="620" height="266"><br>
-      </figure>back
-      <button cnextlass="gallery-button gallery-button-back" type="button">Назад</button>
-      <button class="gallery-button gallery-button-next" type="button">Вперед</button>
-      <a class="button" href="#">Открыть каталог</a>
-    </section>
+    <div class="grid-promo container">
+      <section class="gallery">
+        <h2 class="visually-hidden">Галерея</h2>
+        <figure class="gallery-content">
+          <figcaption>
+            <h3>Перфораторы</h3>
+            <p>Настоящие мужские игрушки</p>
+          </figcaption>
+          <img src="img/gallery/perfs.jpg" alt="Строитель с большим перфоратором BOSH" width="620" height="266"><br>
+        </figure>back
+        <button cnextlass="gallery-button gallery-button-back" type="button">Назад</button>
+        <button class="gallery-button gallery-button-next" type="button">Вперед</button>
+        <a class="button" href="#">Открыть каталог</a>
+      </section>
 
-    <section class="promotions">
-      <h2 class="visually-hidden">Акции</h2>
-      <ul class="promotions-list">
-        <li class="promotions-list-item discounts">
-          <h3>Скидки 50%</h3>
-          <a class="button button-promotions" href="#">На 350 товаров</a>
-        </li>
+      <section class="promotions">
+        <h2 class="visually-hidden">Акции</h2>
+        <ul class="promotions-list">
+          <li class="promotions-list-item discounts">
+            <h3>Скидки 50%</h3>
+            <a class="button button-promotions" href="#">На 350 товаров</a>
+          </li>
 
-        <li class="promotions-list-item delivery">
-          <h3>Доставка</h3>
-          <a class="button button-promotions" href="#">Бесплатно</a>
-        </li>
-      </ul>
-    </section>
+          <li class="promotions-list-item delivery">
+            <h3>Доставка</h3>
+            <a class="button button-promotions" href="#">Бесплатно</a>
+          </li>
+        </ul>
+      </section>
+    </div>
 
-    <section class="popular-products">
+    <section class="popular-products container">
       <div class="section-top">
         <h2 class="section-header">Популярные товары:</h2>
         <a class="button" href="#">Все популярные товары</a>
@@ -151,7 +156,7 @@
       </ul>
     </section>
 
-    <section class="popular-partners">
+    <section class="popular-partners container">
       <div class="section-top">
         <h2 class="section-header">Популярные производители</h2>
         <a class="button" href="#">Все производители</a>
@@ -178,19 +183,23 @@
     </section>
 
     <section class="services">
-      <h2 class="section-header section-header-black">Сервисы</h2>
-      <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
-        Мы стараемся изо всех сил, что-бы сделать ваши покупки приятными.</p>
+      <div class="grid-services container">
+        <h2 class="section-header section-header-black">Сервисы</h2>
+        <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
+          Мы стараемся изо всех сил, что-бы сделать ваши покупки приятными.</p>
 
-      <ul class="services-list">
-        <li class="services-list-item services-list-item-active">Доставка</li>
-        <li class="services-list-item">Гарантия</li>
-        <li class="services-list-item">Кредит</li>
-      </ul>
-      <h3 class="section-header">Доставка</h3>
-      <p>Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно!<br> Ведь мы неплохо
-        заработаем,<br>
-        поднимая его на ваш этаж!</p>
+        <ul class="services-list">
+          <li class="services-list-item services-list-item-active">Доставка</li>
+          <li class="services-list-item">Гарантия</li>
+          <li class="services-list-item">Кредит</li>
+        </ul>
+        <div class="services-caption">
+          <h3 class="section-header">Доставка</h3>
+          <p>Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно!<br> Ведь мы неплохо
+            заработаем,<br>
+            поднимая его на ваш этаж!</p>
+        </div>
+      </div>
     </section>
 
     <section class="about-as">
