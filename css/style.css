@@ -110,7 +110,7 @@ body {
     justify-content: space-between;
 }
 
-.header-logo, .header-logo img{
+.header-logo, .header-logo img, .footer-logo, .footer-lolg img {
     position: absolute;
     top: 0;
     left: 0;
@@ -570,13 +570,30 @@ body {
 }
 
 .footer-top {
-    display: grid;
-    grid-template-columns: 380px 1fr;
+    display: flex;
+    position: relative;
+}
+
+.footer-top p {
+    margin-top: 90px;
+    width: 390px;
 }
 
 .footer-contacts-phone {
     color: var(--basic-background);
     text-decoration: none;
+}
+
+.site-navigation-list {
+    margin-top: 32px;
+    width: 550px;
+    height: 36px;   
+    justify-content: space-between;
+}
+
+.site-navigation-list, .links-list {
+    display: flex;
+    align-items: center;
 }
 
 .site-navigation-list-item a {
@@ -598,14 +615,11 @@ body {
     text-decoration: none;
 }
 
-.site-navigation-list {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-}
-
 .links-list {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
+    width: 550px;
+    height: 82px;
+    justify-content: space-around;
+    margin-bottom: 43px;
 }
 
 .footer-bottom {
@@ -616,20 +630,18 @@ body {
 }
 
 .footer-bottom-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
 }
 
-.footer-bottom-grid .copy {
-    justify-self: start;
+.footer-bottom-grid .copy, .footer-bottom-grid .designed-wrapper {
+    width: 300px;
 }
 
-.social {
-    justify-self: center;
-}
-
-.footer-bottom-grid p {
-    justify-self: end;
+.social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .social-button {
@@ -640,6 +652,11 @@ body {
 
 .social-button:hover, .social-button:active {
     background-color: var(--basic-red);
+}
+
+.footer-bottom-grid .designed-wrapper {
+    display: flex;
+    justify-content: space-between;
 }
 
 .mail, .designed {
