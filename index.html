@@ -19,12 +19,13 @@
         <a class="header-logo"><img src="img/logo.png" width="220" height="47" alt="Техномарт"></a>
 
         <form class="search" action="https://echo.htmlacademy.ru" method="GET">
-          <label>Поиск:<input type="search" name="main-search"></label><br>
+		  <input type="search" name="main-search" id="main-search">
+		  <label for="main-search">Поиск:</label>
         </form>
 
         <ul class="order-info">
-          <li class="order-info-item"><a href="#">Закладки <span>0</span></a></li>
-          <li class="order-info-item"><a href="#">Корзина <span>0</span></a></li>
+          <li class="order-info-item bookmark"><a href="#">Закладки <span>0</span></a></li>
+          <li class="order-info-item cart"><a href="#">Корзина <span>0</span></a></li>
           <li class="order-info-item checkout"><a href="#">Оформить заказ</a></li>
         </ul>
 
