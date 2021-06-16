@@ -19,8 +19,8 @@
         <a class="header-logo"><img src="img/logo.png" width="220" height="47" alt="Техномарт"></a>
 
         <form class="search" action="https://echo.htmlacademy.ru" method="GET">
-		  <input type="search" name="main-search" id="main-search">
-		  <label for="main-search">Поиск:</label>
+          <input type="search" name="main-search" id="main-search">
+          <label for="main-search">Поиск:</label>
         </form>
 
         <ul class="order-info">
@@ -37,15 +37,24 @@
 
       <h2 class="visually-hidden">Как нас найти</h2>
       <p class="header-contacts">
-        <a class="header-contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a><br>
+        <a class="header-contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
         г. Санкт-Петербург, наб. Реки Карповки, 5 лит П
       </p>
 
-      <p class="authorize">
-        <a class="login" href="#">Войти</a>
-        <a class="registration" href="#">Регистрация</a>
-      </p>
+      <div class="authorize-section">
+        <p class="authorize">
+          <a class="login" href="#">Войти</a>
+          <a class="registration" href="#">Регистрация</a>
+        </p>
+        <div class="user-info">
+          <p class="user">Равшан Джамшутович</p>
+          <p><a class="user-link" href="#">Мои заказы</a>
+            <a class="user-link" href="#">Личный кабинет</a>
+          </p>
+        </div>
+      </div>
     </div>
+
 
     <nav class="main-nav container">
       <ul class="main-nav-list">
@@ -65,29 +74,29 @@
     <section class="promo container">
       <h2 class="visually-hidden">Товары, акции и галерея</h2>
       <ul class="promo-list">
-        <li class="promo-list-item materials">
+        <li class="promo-list-item new materials">
           <h3>Материалы</h3>
-          <a class="button button-promo" href="#">На любой вкус</a>
+          <a href="#"  class="button button-promo">На любой вкус</a>
         </li>
 
         <li class="promo-list-item tools">
           <h3>Инструмент</h3>
-          <a class="button button-promo" href="#">На все случаи</a>
+          <a href="#"  class="button button-promo">На все случаи</a>
         </li>
 
         <li class="promo-list-item vechicle">
           <h3>Техника</h3>
-          <a class="button button-promo" href="#">Для стройки</a>
+          <a href="#"  class="button button-promo">Для стройки</a>
         </li>
 
         <li class="promo-list-item discounts">
           <h3>Скидки 50%</h3>
-          <a class="button button-promo" href="#">На 350 товаров</a>
+          <a href="#"  class="button button-promo">На 350 товаров</a>
         </li>
 
         <li class="promo-list-item delivery">
           <h3>Доставка</h3>
-          <a class="button button-promo" href="#">Бесплатно</a>
+          <a href="#"  class="button button-promo">Бесплатно</a>
         </li>
 
         <li class="promo-list-item gallery">
@@ -96,11 +105,12 @@
               <h3>Перфораторы</h3>
               <p>Настоящие мужские игрушки</p>
             </figcaption>
-            <img src="img/gallery/perfs.jpg" alt="Строитель с большим перфоратором BOSH" width="620" height="266">
+            <img src="img/gallery/perfs.jpg" alt="Строитель с большим проводным перфоратором BOSH" width="620"
+              height="266">
           </figure>
-          <button class="gallery-button gallery-button-back" type="button">Назад</button>
-          <button class="gallery-button gallery-button-next" type="button">Вперед</button>
-          <a class="button gallery-button" href="#">Открыть каталог</a>
+          <button class="gallery-button gallery-button-back" type="button" value="back"></button>
+          <button class="gallery-button gallery-button-next" type="button" value="next"></button>
+          <a class="button open-catalog" href="#">Открыть каталог</a>
         </li>
       </ul>
 
@@ -110,7 +120,7 @@
 
         </ul>
       </div>
-    </section>>
+    </section>
 
     <section class="popular-products container">
       <div class="section-top">
@@ -124,16 +134,16 @@
             <h3>Перфоратор BOSH BFG 9000</h3>
             <img src="img/products/bosh_bfg_9000.jpg" alt="Трехрежимный проводной перфоратор" width="184" height="164">
           </a>
-          <p><span class="product-cost-deleted">32500</span> <span class="product-cost-current">25500 Р.</span></p>
+          <p><span class="product-cost-deleted">32500 р.</span> <span class="product-cost-current">25500 Р.</span></p>
         </li>
 
-        <li class="products-list-item">
+        <li class="products-list-item new">
           <a href="#">
             <h3>Перфоратор BOSH BFG 3000</h3>
             <img src="img/products/bosh_bfg_3000.jpg" alt="Трехрежимный аккумуляторный перфоратор" width="127"
               height="112">
           </a>
-          <p><span class="product-cost-deleted">22500</span> <span class="product-cost-current">15500 Р.</span></p>
+          <p><span class="product-cost-deleted">22500 р.</span> <span class="product-cost-current">15500 Р.</span></p>
         </li>
 
         <li class="products-list-item">
@@ -141,16 +151,16 @@
             <h3>Перфоратор BOSH BFG 6000</h3>
             <img src="img/products/bosh_bfg_6000.jpg" alt="Аккумуляторный перфоратор" width="144" height="128">
           </a>
-          <p><span class="product-cost-deleted">30500</span> <span class="product-cost-current">25500 Р.</span></p>
+          <p><span class="product-cost-deleted">30500 р.</span> <span class="product-cost-current">25500 Р.</span></p>
         </li>
 
-        <li class="products-list-item">
+        <li class="products-list-item new">
           <a href="#">
             <h3>Перфоратор BOSH BFG 2000</h3>
             <img src="img/products/bosh_bfg_2000.jpg" alt="Аккумуляторный трехрежимный перфоратор" width="127"
               height="112">
           </a>
-          <p><span class="product-cost-deleted">22500</span> <span class="product-cost-current">12500 Р.</span></p>
+          <p><span class="product-cost-deleted">22500 р.</span> <span class="product-cost-current">12500 Р.</span></p>
         </li>
       </ul>
     </section>
@@ -204,9 +214,9 @@
     <div class="grid-about container">
       <section class="about-as">
         <h2 class="section-header section-header-black">Компания "Техномарт"</h2>
-        <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для<br> ремонта и строительства не оставит
-          равнодушными любителей сэкономить на<br> гастарбайтерах.</p>
-        <p>Мы можем доствить ваш товар в самые отдаленные точки России!<br>
+        <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит
+          равнодушными любителей сэкономить на гастарбайтерах.</p>
+        <p>Мы можем доствить ваш товар в самые отдаленные точки России!
           Техномарт работает со многими транспортными компаниями:</p>
 
         <ul class="delivery-list">
@@ -222,7 +232,7 @@
         <h2 class="section-header section-header-black">Контакты</h2>
         <p>Вы можете забрать товар сами,<br>
           заехав в наш офис:</p>
-        <img src="img/map.png" alt="г. Санкт-Петербург, наб. Реки Карповки, 5 лит П" width="300" height="158"><br>
+        <img class="map-picture" src="img/map.png" alt="г. Санкт-Петербург, наб. Реки Карповки, 5 лит П" width="300" height="158">
         <a class="button" href="#">Заблудились? Напишите нам!</a>
       </section>
     </div>
@@ -268,12 +278,12 @@
         <p class="copy">&copy; 2010-2021 Копания "Техномарт"<br>
           Все права защищены</p>
 
-          <h2 class="visually-hidden">Соцсети</h2>
-          <ul class="social-list">
-            <li><a class="social-button" href="#"><span>Вконтакте</span> <img src="img/social/vk.svg" alt="Наш Вконтакте"></a></li>
-            <li><a class="social-button" href="#"><span>Фейсбук</span> <img src="img/social/fb.svg" alt="Наш Фейсбук"></a></li>
-            <li><a class="social-button" href="#"><span>Инстаграм</span> <img src="img/social/instagram.svg" alt="Наш Инстаграм"></a></li>
-          </ul>
+        <h2 class="visually-hidden">Соцсети</h2>
+        <ul class="social-list">
+          <li><a class="social-button" href="#"><img src="img/social/vk.svg" alt="Наш Вконтакте"></a></li>
+          <li><a class="social-button" href="#"><img src="img/social/fb.svg" alt="Наш Фейсбук"></a></li>
+          <li><a class="social-button" href="#"><img src="img/social/instagram.svg" alt="Наш Инстаграм"></a></li>
+        </ul>
 
         <div class="designed-wrapper">
           <p>Обратная связь:<br>
