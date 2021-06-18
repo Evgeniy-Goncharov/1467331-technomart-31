@@ -76,27 +76,27 @@
       <ul class="promo-list">
         <li class="promo-list-item new materials">
           <h3>Материалы</h3>
-          <a href="#"  class="button button-promo">На любой вкус</a>
+          <a href="#" class="button button-promo">На любой вкус</a>
         </li>
 
         <li class="promo-list-item tools">
           <h3>Инструмент</h3>
-          <a href="#"  class="button button-promo">На все случаи</a>
+          <a href="#" class="button button-promo">На все случаи</a>
         </li>
 
         <li class="promo-list-item vechicle">
           <h3>Техника</h3>
-          <a href="#"  class="button button-promo">Для стройки</a>
+          <a href="#" class="button button-promo">Для стройки</a>
         </li>
 
         <li class="promo-list-item discounts">
           <h3>Скидки 50%</h3>
-          <a href="#"  class="button button-promo">На 350 товаров</a>
+          <a href="#" class="button button-promo">На 350 товаров</a>
         </li>
 
         <li class="promo-list-item delivery">
           <h3>Доставка</h3>
-          <a href="#"  class="button button-promo">Бесплатно</a>
+          <a href="#" class="button button-promo">Бесплатно</a>
         </li>
 
         <li class="promo-list-item gallery">
@@ -232,9 +232,37 @@
         <h2 class="section-header section-header-black">Контакты</h2>
         <p>Вы можете забрать товар сами,<br>
           заехав в наш офис:</p>
-        <img class="map-picture" src="img/map.png" alt="г. Санкт-Петербург, наб. Реки Карповки, 5 лит П" width="300" height="158">
+        <img class="map-picture" src="img/map.png" alt="г. Санкт-Петербург, наб. Реки Карповки, 5 лит П" width="300"
+          height="158">
         <a class="button" href="#">Заблудились? Напишите нам!</a>
       </section>
+
+      <aside class="modal modal-mail hidden">
+        <h2 class="visually-hidden">Напишите нам:</h2>
+        <form class="modal-mail-form" method="GET" action="https://echo.htmlacademy.ru">
+          <fieldset class="modal-form-data">
+            <label class="modal-form-label">
+              Ваше имя:<input type="text" name="user-name">
+            </label>
+            <label class="modal-form-label">
+              Ваш e-mail:<input type="mail" name="mail">
+            </label>
+            <label class="modal-form-label modal-form-label-textarea">
+              Текст письма:<input type="textarea" name="mail-content">
+            </label>
+          </fieldset>
+          <fieldset class="modal-form-submit">
+            <button class="button" type="submit" name="submit">Отправить</button>
+          </fieldset>
+        </form>
+        <button class="close-modal" type="button" aria-label="Закрыть"></button>
+      </aside>
+
+      <aside class="modal modal-map hidden">
+        <h2 class="visually-hidden">Как нас найти?</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8224465563626!2d30.31522021617442!3d59.96826866667002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1623961539118!5m2!1sru!2sru" width="943" height="442" allowfullscreen title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"></iframe>
+        <button class="close-modal" type="button" aria-label="Закрыть"></button>
+      </aside>
     </div>
 
   </main>
@@ -296,6 +324,8 @@
       </div>
     </div>
   </footer>
+
+  
 </body>
 
 </html>
