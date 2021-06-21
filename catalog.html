@@ -19,12 +19,13 @@
         <a class="header-logo" href="index.html"><img src="img/logo.png" width="220" height="47" alt="Техномарт"></a>
 
         <form class="search" action="https://echo.htmlacademy.ru" method="GET">
-          <label>Поиск:<input type="search" name="main-search"></label><br>
+          <input type="search" name="main-search" id="main-search">
+          <label for="main-search">Поиск:</label>
         </form>
 
         <ul class="order-info">
-          <li class="order-info-item"><a href="#">Закладки <span>0</span></a></li>
-          <li class="order-info-item"><a href="#">Корзина <span>0</span></a></li>
+          <li class="order-info-item bookmark"><a href="#">Закладки <span>0</span></a></li>
+          <li class="order-info-item cart cart-filled"><a href="#">Корзина <span>10</span></a></li>
           <li class="order-info-item checkout"><a href="#">Оформить заказ</a></li>
         </ul>
 
@@ -36,15 +37,21 @@
 
       <h2 class="visually-hidden">Как нас найти</h2>
       <p class="header-contacts">
-        <a class="header-contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a><br>
+        <a class="header-contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
         г. Санкт-Петербург, наб. Реки Карповки, 5 лит П
       </p>
 
-      <div class="user-info">
-        <p class="user">Равшан Джамшутович</p>
-        <p><a class="user-link" href="#">Мои заказы</a>
-          <a class="user-link" href="#">Личный кабинет</a>
+      <div class="authorize-section authorized">
+        <p class="authorize">
+          <a class="login" href="#">Войти</a>
+          <a class="registration" href="#">Регистрация</a>
         </p>
+        <div class="user-info">
+          <a class="user" href="#">Равшан Джамшутович</a>
+          <p><a class="user-link" href="#">Мои заказы</a>
+            <a class="user-link" href="#">Личный кабинет</a>
+          </p>
+        </div>
       </div>
     </div>
 
@@ -63,7 +70,7 @@
 
   <main class="catalog-main">
     <div class="container">
-      <ul class="breadcrumbs container">
+      <ul class="breadcrumbs">
         <li><a href="#">Каталог</a></li>
         <li><a href="#">Инструмент</a></li>
         <li>Перфораторы</li>
@@ -82,8 +89,22 @@
           <li class="sorting-list-item sorting-list-item-cost sorting-list-item-active">По цене</li>
           <li class="sorting-list-item sorting-list-item-type">По типу</li>
           <li class="sorting-list-item sorting-list-item-functions">По функционалу</li>
-          <li class="sorting-list-item sorting-list-item-up sorting-list-item-active">Вверх</li>
-          <li class="sorting-list-item sorting-list-item-down">Вниз</li>
+          <li class="sorting-list-item sorting-order">
+            <input class="sorting-order-up visually-hidden" type="radio" name="sorting-order-button"
+              id="sorting-order-up-button" value="up" checked>
+            <label class="sorting-order-up" for="sorting-order-up-button">
+              <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.66241 0L11.1624 10L0.162415 10" fill="#C5C5C5" />
+              </svg>
+            </label>
+            <input class="sorting-order-down visually-hidden" type="radio" name="sorting-order-button"
+              id="sorting-order-down-button" value="down">
+            <label class="sorting-order-down" for="sorting-order-down-button">
+              <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.66241 10L0.162415 0H11.1624" fill="#C5C5C5" />
+              </svg>
+            </label>
+          </li>
         </ul>
       </div>
 
@@ -93,116 +114,182 @@
           <li class="products-list-item">
             <a href="#">
               <h3>Перфоратор BOSH BFG 6000</h3>
-              <img src="img/products/bosh_bfg_6000.jpg" alt="Аккумуляторный перфоратор" width="144" height="128">
+              <img src="img/products/bosh_bfg_6000.jpg" alt="Аккумуляторный перфоратор" width="210" height="170">
             </a>
-            <p><span class="product-cost-deleted">30500</span> <span class="product-cost-current">25500 Р.</span></p>
+            <p><span class="product-cost-deleted">30500 р.</span> <span class="product-cost-current">25500 Р.</span></p>
+            <div class="product-buy-buttons">
+              <button class="product-buy-button in-cart" type="button" aria-label="Довавить продукт в корзину">Купить</button>
+              <button class="product-buy-button in-bookmarks" type="button" aria-label="Довавить продукт в закладки">В закладки</button>
+            </div>
           </li>
 
           <li class="products-list-item">
             <a href="#">
               <h3>Перфоратор BOSH BFG 6000</h3>
-              <img src="img/products/bosh_bfg_6000.jpg" alt="Аккумуляторный перфоратор" width="144" height="128">
+              <img src="img/products/bosh_bfg_6000.jpg" alt="Аккумуляторный перфоратор" width="210" height="170">
             </a>
-            <p><span class="product-cost-deleted">30500</span> <span class="product-cost-current">25500 Р.</span></p>
+            <p><span class="product-cost-deleted">30500 р.</span> <span class="product-cost-current">25500 Р.</span></p>
+            <div class="product-buy-buttons">
+              <button class="product-buy-button in-cart" type="button" aria-label="Довавить продукт в корзину">Купить</button>
+              <button class="product-buy-button in-bookmarks" type="button" aria-label="Довавить продукт в закладки">В закладки</button>
+            </div>
           </li>
 
           <li class="products-list-item">
             <a href="#">
               <h3>Перфоратор BOSH BFG 6000</h3>
-              <img src="img/products/bosh_bfg_6000.jpg" alt="Аккумуляторный перфоратор" width="144" height="128">
+              <img src="img/products/bosh_bfg_6000.jpg" alt="Аккумуляторный перфоратор" width="210" height="170">
             </a>
-            <p><span class="product-cost-deleted">30500</span> <span class="product-cost-current">25500 Р.</span></p>
+            <p><span class="product-cost-deleted">30500 р.</span> <span class="product-cost-current">25500 Р.</span></p>
+            <div class="product-buy-buttons">
+              <button class="product-buy-button in-cart" type="button" aria-label="Довавить продукт в корзину">Купить</button>
+              <button class="product-buy-button in-bookmarks" type="button" aria-label="Довавить продукт в закладки">В закладки</button>
+            </div>
           </li>
 
           <li class="products-list-item">
             <a href="#">
               <h3>Перфоратор BOSH BFG 3000</h3>
-              <img src="img/products/bosh_bfg_3000.jpg" alt="Трехрежимный аккумуляторный перфоратор" width="127"
-                height="112">
+              <img src="img/products/bosh_bfg_3000.jpg" alt="Трехрежимный аккумуляторный перфоратор" width="210" height="170">
             </a>
-            <p><span class="product-cost-deleted">22500</span> <span class="product-cost-current">15500 Р.</span></p>
+            <p><span class="product-cost-deleted">22500 р.</span> <span class="product-cost-current">15500 Р.</span></p>
+            <div class="product-buy-buttons">
+              <button class="product-buy-button in-cart" type="button" aria-label="Довавить продукт в корзину">Купить</button>
+              <button class="product-buy-button in-bookmarks" type="button" aria-label="Довавить продукт в закладки">В закладки</button>
+            </div>
           </li>
 
           <li class="products-list-item">
             <a href="#">
               <h3>Перфоратор BOSH BFG 6000</h3>
-              <img src="img/products/bosh_bfg_6000.jpg" alt="Аккумуляторный перфоратор" width="144" height="128">
+              <img src="img/products/bosh_bfg_6000.jpg" alt="Аккумуляторный перфоратор" width="210" height="170">
             </a>
-            <p><span class="product-cost-deleted">30500</span> <span class="product-cost-current">25500 Р.</span></p>
+            <p><span class="product-cost-deleted">30500 р.</span> <span class="product-cost-current">25500 Р.</span></p>
+            <div class="product-buy-buttons">
+              <button class="product-buy-button in-cart" type="button" aria-label="Довавить продукт в корзину">Купить</button>
+              <button class="product-buy-button in-bookmarks" type="button" aria-label="Довавить продукт в закладки">В закладки</button>
+            </div>
           </li>
 
           <li class="products-list-item">
             <a href="#">
               <h3>Перфоратор BOSH BFG 2000</h3>
-              <img src="img/products/bosh_bfg_2000.jpg" alt="Аккумуляторный трехрежимный перфоратор" width="127"
-                height="112">
+              <img src="img/products/bosh_bfg_2000.jpg" alt="Аккумуляторный трехрежимный перфоратор" width="210" height="170">
             </a>
-            <p><span class="product-cost-deleted">22500</span> <span class="product-cost-current">12500 Р.</span></p>
+            <p><span class="product-cost-deleted">22500 р.</span> <span class="product-cost-current">12500 Р.</span></p>
+            <div class="product-buy-buttons">
+              <button class="product-buy-button in-cart" type="button" aria-label="Довавить продукт в корзину">Купить</button>
+              <button class="product-buy-button in-bookmarks" type="button" aria-label="Довавить продукт в закладки">В закладки</button>
+            </div>
           </li>
 
           <li class="products-list-item">
             <a href="#">
               <h3>Перфоратор BOSH BFG 3000</h3>
-              <img src="img/products/bosh_bfg_3000.jpg" alt="Трехрежимный аккумуляторный перфоратор" width="127"
-                height="112">
+              <img src="img/products/bosh_bfg_3000.jpg" alt="Трехрежимный аккумуляторный перфоратор" width="210" height="170">
             </a>
-            <p><span class="product-cost-deleted">22500</span> <span class="product-cost-current">15500 Р.</span></p>
+            <p><span class="product-cost-deleted">22500 р.</span> <span class="product-cost-current">15500 Р.</span></p>
+            <div class="product-buy-buttons">
+              <button class="product-buy-button in-cart" type="button" aria-label="Довавить продукт в корзину">Купить</button>
+              <button class="product-buy-button in-bookmarks" type="button" aria-label="Довавить продукт в закладки">В закладки</button>
+            </div>
           </li>
 
           <li class="products-list-item">
             <a href="#">
               <h3>Перфоратор BOSH BFG 6000</h3>
-              <img src="img/products/bosh_bfg_6000.jpg" alt="Аккумуляторный перфоратор" width="144" height="128">
+              <img src="img/products/bosh_bfg_6000.jpg" alt="Аккумуляторный перфоратор" width="210" height="170">
             </a>
-            <p><span class="product-cost-deleted">30500</span> <span class="product-cost-current">25500 Р.</span></p>
+            <p><span class="product-cost-deleted">30500 р.</span> <span class="product-cost-current">25500 Р.</span></p>
+            <div class="product-buy-buttons">
+              <button class="product-buy-button in-cart" type="button" aria-label="Довавить продукт в корзину">Купить</button>
+              <button class="product-buy-button in-bookmarks" type="button" aria-label="Довавить продукт в закладки">В закладки</button>
+            </div>
           </li>
 
           <li class="products-list-item">
             <a href="#">
               <h3>Перфоратор BOSH BFG 2000</h3>
-              <img src="img/products/bosh_bfg_2000.jpg" alt="Аккумуляторный трехрежимный перфоратор" width="127"
-                height="112">
+              <img src="img/products/bosh_bfg_2000.jpg" alt="Аккумуляторный трехрежимный перфоратор" width="210" height="170">
             </a>
-            <p><span class="product-cost-deleted">22500</span> <span class="product-cost-current">12500 Р.</span></p>
+            <p><span class="product-cost-deleted">22500 р.</span> <span class="product-cost-current">12500 Р.</span></p>
+            <div class="product-buy-buttons">
+              <button class="product-buy-button in-cart" type="button" aria-label="Довавить продукт в корзину">Купить</button>
+              <button class="product-buy-button in-bookmarks" type="button" aria-label="Довавить продукт в закладки">В закладки</button>
+            </div>
           </li>
         </ul>
 
         <div class="pagination">
           <ul class="pagination-list">
-            <li class="pagination-list-item pagination-list-item-active"><a>1</a></li>
+            <li class="pagination-list-item"><a class="active">1</a></li>
             <li class="pagination-list-item"><a href="#">2</a></li>
             <li class="pagination-list-item"><a href="#">3</a></li>
-            <li class="pagination-list-item"><a href="#">Следующая</a></li>
+            <li class="pagination-list-item"><a class="next" href="#">Следующая</a></li>
           </ul>
         </div>
       </div>
 
       <aside class="filter">
-        <h2>Фильтр:</h2>
+        <h2 class="filter-heading">Фильтр:</h2>
         <form class="filter-form" action="https://echo.htmlacademy.ru" method="GET">
           <fieldset class="filter-cost">
             <legend>Цена</legend>
-            <input name="cost" type="range" min="0" max="50000" step="1000" value="30000">
-            <input name="min-cost" type="number" value="0">
-            <label> - <input name="max-cost" type="number" value="30000"></label>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="width: 30%; margin-left: 20%">
+                    <div class="toggle toggle-min" tabindex="0"style="left: 20%"></div>
+                    <div class="toggle toggle-max" tabindex="0"style="left: 50%"></div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="price-controls">
+                <input name="min-cost" type="number" value="0">
+                <label for="filter-max-cost"> - </label>
+                <input name="max-cost" type="number" id="filter-max-cost" value="30000">
+              </div>
+            </div>
           </fieldset>
 
           <fieldset class="filter-manufacturer">
             <legend>Производители:</legend>
             <ul class="filter-manufacturer-list">
-              <li><label><input name="bosh" type="checkbox" checked>BOCH</label></li>
-              <li><label><input name="interskol" type="checkbox">ИНТЕРСКОЛ</label></li>
-              <li><label><input name="makita" type="checkbox" checked>MAKITA</label></li>
-              <li><label><input name="dewalt" type="checkbox">DeWALT</label></li>
-              <li><label><input name="hitachi" type="checkbox">HITACHI</label></li>
+              <li>
+                <input class="visually-hidden" id="bosh-checkbox" name="bosh" type="checkbox" checked>
+                <label for="bosh-checkbox">BOCH</label>
+              </li>
+              <li>
+                <input class="visually-hidden" id="interskol-checkbox" name="interskol" type="checkbox">
+                <label for="interskol-checkbox">ИНТЕРСКОЛ</label>
+              </li>
+              <li>
+                <input class="visually-hidden" id="makita-checkbox" name="makita" type="checkbox" checked>
+                <label for="makita-checkbox">MAKITA</label>
+              </li>
+              <li>
+                <input class="visually-hidden" id="dewalt-checkbox" name="dewalt" type="checkbox">
+                <label for="dewalt-checkbox">DeWALT</label>
+              </li>
+              <li>
+                <input class="visually-hidden" id="hitachi-checkbox" name="hitachi" type="checkbox">
+                <label for="hitachi-checkbox">HITACHI</label>
+              </li>
             </ul>
           </fieldset>
 
           <fieldset class="filter-power">
             <legend>Питание:</legend>
             <ul class="filter-power-list">
-              <li><label><input name="power" type="radio" checked>Аккумуляторные</label></li>
-              <li><label><input name="power" type="radio">Сетевые</label></li>
+              <li>
+                <input class="visually-hidden" name="power" id="power-akkum" type="radio" checked>
+                <label for="power-akkum">Аккумуляторные</label>
+              </li>
+              <li>
+                <input class="visually-hidden" name="power" id="power-wired" type="radio">
+                <label for="power-wired">Сетевые</label>
+              </li>
             </ul>
           </fieldset>
           <input class="show" type="submit" value="Показать">
@@ -269,12 +356,10 @@
 
         <h2 class="visually-hidden">Соцсети</h2>
         <ul class="social-list">
-          <li><a class="social-button" href="#"><span>Вконтакте</span> <img src="img/social/vk.svg"
-                alt="Наш Вконтакте"></a></li>
-          <li><a class="social-button" href="#"><span>Фейсбук</span> <img src="img/social/fb.svg" alt="Наш Фейсбук"></a>
+          <li><a class="social-button" href="#"><img src="img/social/vk.svg" alt="Наш Вконтакте"></a></li>
+          <li><a class="social-button" href="#"><img src="img/social/fb.svg" alt="Наш Фейсбук"></a>
           </li>
-          <li><a class="social-button" href="#"><span>Инстаграм</span> <img src="img/social/instagram.svg"
-                alt="Наш Инстаграм"></a></li>
+          <li><a class="social-button" href="#"><img src="img/social/instagram.svg" alt="Наш Инстаграм"></a></li>
         </ul>
 
         <div class="designed-wrapper">
