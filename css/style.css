@@ -162,7 +162,7 @@ body {
 
 .header-logo, .header-logo img {
     position: absolute;
-    bottom: -2px;
+    top: 0;
     left: 0;
 }
 
@@ -212,7 +212,7 @@ body {
     border: none;
 	padding-left: 42px;
 	height: 42px;
-	width: 271px;
+	width: 270px;
 }
 
 .search input:focus {
@@ -460,7 +460,6 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
     box-shadow: inset 0px -5px 0px var(--basic-dark-blue-gray);
-    padding: 0 20px;
 }
 
 .main-nav-list li {
@@ -904,15 +903,19 @@ body {
 /* Секция "Популярные производители" */
 
 .popular-partners-list {
-    justify-content: space-between;
     margin-bottom: 54px;
 }
 
 .popular-partners-list-item {
     width: 218px;
     height: 143px;
+    margin-right: 20px;
     margin-bottom: 20px;
     border: 1px solid var(--basic-border);
+}
+
+.popular-partners-list-item:nth-child(4n) {
+    margin: 0;
 }
 
 .popular-partners-list-item:active {
@@ -959,7 +962,7 @@ body {
 
 .services-list {
     width: 240px;
-    height: 325px;
+    min-height: 325px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1155,19 +1158,23 @@ body {
 
 .site-navigation-list {
     margin-top: 32px;
-    width: 550px;
-    height: 36px;   
+    width: 550px;  
     justify-content: space-between;
 }
 
 .site-navigation-list, .links-list {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 
 .site-navigation-list-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--basic-background);
     text-decoration: none;
+    height: 36px;
 }
 
 .site-navigation-list-item a:hover, .links-list-item a:hover {
@@ -1181,12 +1188,16 @@ body {
 
 .links-list {
     width: 550px;
-    height: 82px;
+    
     justify-content: space-around;
     margin-bottom: 43px;
 }
 
 .links-list-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 82px;
     color: var(--basic-gold);
     text-decoration: none;
 }
@@ -1284,7 +1295,7 @@ body {
     box-shadow: 0px 4px 20px var(--basic-box-shadow), inset 0 7px 0 0 var(--basic-red);
 }
 
-
+/* Модалка "Написать" */
 
 .modal-mail {
     font-family: "Cuprum", "Arial", sans-serif;
@@ -1298,29 +1309,7 @@ body {
     animation: shake 0.6s;
   }
 
-.modal-map {
-    width: 943px;
-    height: 449px;
-}
 
-.modal-map-image {
-    display: block;
-    margin-top: 7px;
-}
-
-.modal-map iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: none;
-    width: 943px;
-    height: 442px;
-    margin-top: 7px;
-}
-
-.modal-mail-form {
-    padding-top: 46px;
-}
 
 .close-modal {
     position: absolute;
@@ -1354,7 +1343,6 @@ body {
 }
 
 .modal-form-label {
-    
     margin-bottom: 13px;
 }
 
@@ -1368,7 +1356,6 @@ body {
     box-sizing: border-box;
     border: 2px solid var(--basic-greylight);
     border-radius: 2px;
-    color: var(--basic-greylight);
     margin-top: 11px;
 }
 
@@ -1401,6 +1388,30 @@ body {
 
 .modal-form-submit .button {
     width: 460px;
+}
+
+.modal-map {
+    width: 943px;
+    height: 449px;
+}
+
+.modal-map-image {
+    display: block;
+    margin-top: 7px;
+}
+
+.modal-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    width: 943px;
+    height: 442px;
+    margin-top: 7px;
+}
+
+.modal-mail-form {
+    padding-top: 46px;
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------- */
