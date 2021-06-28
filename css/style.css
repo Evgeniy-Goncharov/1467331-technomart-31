@@ -1425,10 +1425,20 @@ body {
     display: none;
 }
 
-.user {
-    padding: 12px 56px;
-    position: relative;
+.user-wrapper {
     margin-bottom: 7px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 56px;
+    padding-right: 20px;
+    position: relative;
+    height: 45px;
 }
 
 .user::before {
@@ -1443,31 +1453,29 @@ body {
     background-position: center;
 }
 
-.user::after {
-    content: "";
-    width: 20px;
-    height: 17px;
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    background-image: url("../img/icons/login.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 .user:hover::before {
     background-image: url("../img/icons/user-hover.svg");
-}
-
-.user:hover::after {
-    background-image: url("../img/icons/login-hover.svg");
 }
 
 .user:active::before {
     background-image: url("../img/icons/user.svg");
 }
 
-.user:active::after {
+.unlogin {
+    display: block;
+    width: 36px;
+    height: 45px;
+    background-color: var(--basic-white);
+    background-image: url("../img/icons/login.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.unlogin:hover {
+    background-image: url("../img/icons/login-hover.svg");
+}
+
+.unlogin:active {
     background-image: url("../img/icons/login.svg");
 }
 
@@ -1528,6 +1536,7 @@ body {
     text-transform: uppercase;
     height: 59px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding-left: 15px;
     position: relative;
@@ -1591,6 +1600,7 @@ body {
 .sorting {
     grid-column: 2 / -1;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-left: 19px;
 }
@@ -1604,6 +1614,7 @@ body {
 
 .sorting-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 460px;
     align-items: center;
@@ -1676,18 +1687,18 @@ body {
 }
 
 .pagination-list-item a {
-    border: 1px solid var(--basic-border);
-    border-radius: 2px;
-}
-
-.pagination-list-item a {
     color: var(--basic-black);
     text-decoration: none;
-    width: 38px;
+    min-width: 38px;
     height: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid var(--basic-border);
+    border-radius: 2px;
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .pagination-list-item a:active {
@@ -1701,7 +1712,7 @@ body {
 }
 
 .pagination-list-item .next {
-    width: min-content;
+    min-width: 140px;
     padding-left: 30px;
     padding-right: 33px;
 }
