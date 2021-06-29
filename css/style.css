@@ -299,7 +299,7 @@ body {
 	left: 20px;
 }
 
-.cart-filled {
+.cart-filled, .bookmark-filled {
     background-color: var(--basic-red);
 }
 
@@ -624,6 +624,11 @@ body {
 .gallery-content {
     background-color: var(--basic-greylight);
     margin: 0;
+    display: none;
+}
+
+.gallery-content-show {
+    display: block;
 }
 
 .gallery-content figcaption {
@@ -1602,23 +1607,31 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-left: 19px;
+    align-items: center;
 }
 
-.sorting h2, .filter h2 {
+.sorting h2, .filter-heading {
     font-size: 13px;
     line-height: 18px;
     font-weight: normal;
     text-transform: uppercase;
+    margin: 0;
+    padding-left: 18px;
+}
+
+.sorting-options {
+    display: flex;
 }
 
 .sorting-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 460px;
+    width: 360px;
+    height: 38px;
     align-items: center;
-    padding-right: 14px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .sorting, .filter-heading, .range-controls, .price-controls input {
@@ -1627,20 +1640,32 @@ body {
 }
 
  .sorting-list-item {
+    display: flex;
+    justify-content: center;
+    align-content: center;
     opacity: 0.3;
     text-decoration: underline dotted var(--basic-red);
+
  }
 
- .sorting-list-item-active {
+ .sorting-list-item:hover {
+     opacity: 1;
+     text-decoration: underline solid var(--basic-red);
+ }
+
+ .sorting-list-item-input:checked + .sorting-list-item {
     color: var(--basic-red);
     opacity: 1;
     text-decoration: none;
  }
 
+ .sorting-list-item-input:focus + .sorting-list-item, .sorting-order-input:focus + label {
+    border: 1px solid var(--basic-black);
+ }
+
  .sorting-order {
-    width: 43px;
+    width: 80px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     opacity: 1;
  }
@@ -1648,6 +1673,7 @@ body {
  .sorting-order-up, .sorting-order-down {
     width: 11px;
     height: 10px;
+    margin-left: 21px;
     vertical-align: top;
  }
 
@@ -1915,6 +1941,10 @@ body {
 
 .filter-power-list input:checked:disabled + label::before {
     background-image: url("../img/icons/radio-on-disabled.svg");
+}
+
+.filter-manufacturer-list input:focus + label, .filter-power-list input:focus + label {
+    border: 1px solid var(--basic-black);
 }
 
 .show {
