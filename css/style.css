@@ -9,12 +9,45 @@
 }
 
 @font-face {
+    font-family: "PT-Sans";
+    src: url("../fonts/ptsansbold.woff2") format("woff2"),
+         url("../fonts/ptsansbold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "Cuprum";
     src: url("../fonts/cuprum.woff2") format("woff2"),
          url("../fonts/cuprum.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: "Cuprum";
+    src: url("../fonts/cuprumbold.woff2") format("woff2"),
+         url("../fonts/cuprumbold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Cuprum";
+    src: url("../fonts/cuprumitalic.woff2") format("woff2"),
+         url("../fonts/cuprumitalic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Cuprum";
+    src: url("../fonts/cuprumbolditalic.woff2") format("woff2"),
+         url("../fonts/cuprumbolditalic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+}
+
 /* -------------------------------------------------------------------------------------------------------------------------------- */
 /* Цвета */
 
@@ -184,7 +217,7 @@ body {
 	position: absolute;
 	cursor: pointer;
 	padding: 9px 0 9px 42px;
-	width: 229px;
+	width: 228px;
 	bottom: 0;
 	left: 0;
 }
@@ -253,16 +286,13 @@ body {
     align-items: center;
 	position: relative;
     height: 42px;
+    color: var(--basic-white);
+    text-decoration: none;
+    padding-left: 43px;
 }
 
 .order-info-item a:active {
 	background-color: var(--basic-darker-blue-gray);
-}
-
-.order-info-item a {
-    color: var(--basic-white);
-    text-decoration: none;
-    padding-left: 47px;
 }
 
 .order-info-item span {
@@ -340,11 +370,12 @@ body {
 }
 
 .header-page-caption {
-    width: 270px;
+    width: 240px;
     font-size: 16px;
     line-height: 23px;
     color: var(--basic-red);
     font-style: italic;
+    font-weight: normal;
     margin: 0;
     padding: 0;
     margin-left: 30px;
@@ -360,18 +391,22 @@ body {
     
 }
 
+/* Контакты */
+
 .header-contacts-phone {
+    display: flex;
+    align-items: center;
     font-size: 21px;
     line-height: 30px;
     color: var(--basic-red);
     font-weight: bold;
     text-decoration: none;
+    width: 270px;
+    height: 45px;
     border: 3px solid var(--basic-white);
-    display: block;
 	position: relative;
-    width: 151px;
-    height: 30px;
-    padding: 4px 42px 5px 71px;
+    box-sizing: border-box;
+    padding-left: 71px;
     margin-bottom: 3px;
 }
 
@@ -384,7 +419,7 @@ body {
 	background-repeat: no-repeat;
 	background-position: center center;
 	top: 10px;
-	left: 39px;
+	left: 36px;
 }
 
 /* Регистрация */
@@ -462,6 +497,7 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
     box-shadow: inset 0px -5px 0px var(--basic-dark-blue-gray);
+    padding: 0 27px;
 }
 
 .main-nav-list li {
@@ -476,7 +512,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 60px;
-    padding: 0 24px;
+    padding: 0 25px;
 }
 
 .main-nav-list li a:hover {
@@ -562,7 +598,7 @@ body {
 .promo-list-item h3 {
     font-size: 24px;
     line-height: 30px;
-    font-weight: normal;
+    font-weight: bold;
     margin: 20px 23px 14px;
 }
 
@@ -644,6 +680,8 @@ body {
     line-height: 36px;
     font-weight: bold;
     margin: 0;
+    margin-bottom: 5px;
+    text-transform: uppercase;
 }
 
 .gallery-content p {
@@ -680,7 +718,7 @@ body {
 }
 
 .gallery-button-next {
-    right: 24px;
+    right: 20px;
     background-image: url("../img/icons/gallery-button-right.svg");
 }
 
@@ -737,7 +775,7 @@ body {
     border: 1px solid var(--basic-border);
     text-align: center;
     width: 218px;
-    min-height: 318px;
+    min-height: 316px;
     margin-bottom: 20px;
     margin-right: 20px;
     position: relative;
@@ -762,7 +800,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 215px;
+    height: 210px;
 }
 
 .products-list-item h3 {
@@ -772,7 +810,7 @@ body {
     font-weight: bold;
     color: var(--basic-black);
     margin: 0;
-    padding: 0;
+    padding: 0 10px;
 }
 
 .products-list-item img {
@@ -805,6 +843,7 @@ body {
 .product-cost-deleted {
     color: var(--basic-cost);
     text-decoration-line: line-through;
+    margin-bottom: 3px;
 }
 
 .product-cost-current {
@@ -943,10 +982,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr;
     padding-top: 60px;
-    padding-bottom: 30px;
-    background-image: url("../img/services-bg.png");
-    background-repeat: no-repeat;
-    background-position: bottom right;
+    
 }
 
 .section-header-black {
@@ -964,16 +1000,16 @@ body {
 }
 
 .grid-services .section-header {
-    margin-bottom: 25px;
+    margin-bottom: 23px;
 }
 
 .services-list {
     width: 240px;
-    min-height: 325px;
+    min-height: 290px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     position: relative;
+    padding-top: 72px;
 }
 
 .services-list::before {
@@ -1025,7 +1061,12 @@ body {
 }
 
 .services-caption {
-    padding-top: 67px;
+    padding-top: 70px;
+    padding-left: 6px;
+    background-image: url("../img/services-bg.png");
+    background-repeat: no-repeat;
+    background-position: bottom 10px right;
+    box-sizing: border-box;
 }
 
 .services-caption .section-header {
@@ -1220,9 +1261,15 @@ body {
 .footer-bottom-grid {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    min-height: 107px;
 }
 
-.footer-bottom-grid .copy, .footer-bottom-grid .designed-wrapper {
+.footer-bottom-grid .copy {
+    width: 270px;
+}
+
+.footer-bottom-grid .designed-wrapper {
     width: 300px;
 }
 
