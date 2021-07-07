@@ -16,7 +16,8 @@
   <header class="main-header">
     <div class="header-top">
       <div class="header-top-wrapper container">
-        <a class="header-logo" href="index.html"><img src="img/logo.png" width="220" height="47" alt="Техномарт - интернет-магазин строительных материалов и инструментов для ремонта" tabindex="0"></a>
+        <a class="header-logo" href="index.html"><img src="img/logo.png" width="220" height="47"
+            alt="Техномарт - интернет-магазин строительных материалов и инструментов для ремонта" tabindex="0"></a>
 
         <form class="search" action="https://echo.htmlacademy.ru" method="GET">
           <input type="search" name="main-search" id="main-search">
@@ -89,31 +90,34 @@
       <div class="sorting">
         <h2 class="sorting-caption">Сортировка:</h2>
         <div class="sorting-options">
-        <form class="sorting-list" action="https://echo.htmlacademy.ru" method="GET">
-          <input class="sorting-list-item-input visually-hidden" type="radio" name="sorting-list-item" id="sorting-list-item-cost" checked>
-          <label class="sorting-list-item" for="sorting-list-item-cost">По цене</label>
-          <input class="sorting-list-item-input visually-hidden" type="radio" name="sorting-list-item" id="sorting-list-item-type">
-          <label class="sorting-list-item" for="sorting-list-item-type">По типу</label>
-          <input class="sorting-list-item-input visually-hidden" type="radio" name="sorting-list-item" id="sorting-list-item-functions">
-          <label class="sorting-list-item" for="sorting-list-item-functions">По функционалу</label>
-        </form>
-        <form class="sorting-order" action="https://echo.htmlacademy.ru" method="GET">
-          <input class="sorting-order-input sorting-order-up visually-hidden" type="radio" name="sorting-order-button"
+          <form class="sorting-list" action="https://echo.htmlacademy.ru" method="GET">
+            <input class="sorting-list-item-input visually-hidden" type="radio" name="sorting-list-item"
+              id="sorting-list-item-cost" checked>
+            <label class="sorting-list-item" for="sorting-list-item-cost">По цене</label>
+            <input class="sorting-list-item-input visually-hidden" type="radio" name="sorting-list-item"
+              id="sorting-list-item-type">
+            <label class="sorting-list-item" for="sorting-list-item-type">По типу</label>
+            <input class="sorting-list-item-input visually-hidden" type="radio" name="sorting-list-item"
+              id="sorting-list-item-functions">
+            <label class="sorting-list-item" for="sorting-list-item-functions">По функционалу</label>
+          </form>
+          <form class="sorting-order" action="https://echo.htmlacademy.ru" method="GET">
+            <input class="sorting-order-input sorting-order-up visually-hidden" type="radio" name="sorting-order-button"
               id="sorting-order-up-button" value="up" checked>
             <label class="sorting-order-up" for="sorting-order-up-button">
               <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.66241 0L11.1624 10L0.162415 10" fill="#C5C5C5" />
               </svg>
             </label>
-            <input class="sorting-order-input sorting-order-down visually-hidden" type="radio" name="sorting-order-button"
-              id="sorting-order-down-button" value="down">
+            <input class="sorting-order-input sorting-order-down visually-hidden" type="radio"
+              name="sorting-order-button" id="sorting-order-down-button" value="down">
             <label class="sorting-order-down" for="sorting-order-down-button">
               <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.66241 10L0.162415 0H11.1624" fill="#C5C5C5" />
               </svg>
             </label>
-        </form>
-      </div>
+          </form>
+        </div>
         </ul>
       </div>
 
@@ -289,7 +293,7 @@
             <ul class="filter-manufacturer-list">
               <li>
                 <input class="visually-hidden" id="bosh-checkbox" name="bosh" type="checkbox" checked>
-                <label for="bosh-checkbox">BOCH</label>
+                <label for="bosh-checkbox">BOSCH</label>
               </li>
               <li>
                 <input class="visually-hidden" id="interskol-checkbox" name="interskol" type="checkbox">
@@ -346,7 +350,8 @@
   <footer class="main-footer">
     <div class="footer-top container">
       <section class="footer-contacts">
-        <a class="footer-logo" href="index.html"><img src="img/footer-logo.png" width="220" height="68" alt="Техномарт - интернет-магазин строительных материалов и инструментов для ремонта" tabindex="0"></a>
+        <a class="footer-logo" href="index.html"><img src="img/footer-logo.png" width="220" height="68"
+            alt="Техномарт - интернет-магазин строительных материалов и инструментов для ремонта" tabindex="0"></a>
         <h2 class="visually-hidden">Как нас найти</h2>
         <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П<br>
           <a class="footer-contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
@@ -403,6 +408,19 @@
     </div>
 
   </footer>
+
+  <aside class="modal modal-in-cart hidden">
+    <div class="modal-in-cart-header-wrapper">
+      <h2 class="modal-in-cart-header">Товар добавлен в корзину!</h2>
+    </div>
+    <div class="modal-in-cart-action">
+      <a class="button modal-in-cart-checkout" href="#">Оформить заказ</a>
+      <button class="button modal-buy-continue">Продолжить покупки</button>
+    </div>
+    <button class="close-modal" type="button" aria-label="Закрыть"></button>
+  </aside>
+
+  <script src="js/productincart.js"></script>
 </body>
 
 </html>
