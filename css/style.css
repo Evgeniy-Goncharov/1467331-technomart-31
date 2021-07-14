@@ -57,6 +57,7 @@
     --basic-dark-blue-gray: #293449;
     --basic-darker-blue-gray: #161D29;
     --basic-greylight: #c5c5c5;
+    --basic-grey: #9C9FA7;
     --basic-gold: #FFD180;
     --basic-green: #63A63E;
 	--basic-green-light: #5FBB2D;
@@ -75,10 +76,13 @@
     --special-purple: #DC91D8;
     --special-green: #8ED78F;
     --special-background: #F9F5F0;
+    --special-box-shadow: rgba(0, 0, 0, 0.15);
     --accent-red: #CA2C37;
     --accent-active: rgba(255, 255, 255, 0.5);
     --special-red: #BA2732;
+    --special-red-slider: #EE3643;
     --basic-filter-border: #e5e5e5;
+
 }
 
 @keyframes bounce {
@@ -387,7 +391,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    
+    max-width: 270px;
 }
 
 /* Контакты */
@@ -608,13 +612,16 @@ body {
     color: var(--basic-white);
     text-transform: uppercase;
     text-decoration: none;
-    vertical-align: middle;
     background-color: var(--basic-red);
-    height: 38px;
+    min-height: 38px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     border: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .section-top .button {
@@ -659,7 +666,9 @@ body {
 }
 
 .gallery-content {
-    background-color: var(--basic-greylight);
+    background-color: var(--basic-blue-gray);
+    width: 100%;
+    height: 100%;
     margin: 0;
     display: none;
 }
@@ -732,6 +741,38 @@ body {
     left: 24px;
 }
 
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 36px;
+    left: 0;
+    z-index: 20;
+}
+
+.slider-controls button {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--basic-white);
+    margin-right: 15px;
+}
+
+.slider-controls button:last-child{
+    margin: 0;
+}
+
+.slider-controls .current {
+    background-color: var(--special-red-slider);
+    border: 2px solid var(--basic-white);
+}
+
 /* Секция "Популярные продукты" */
 
 .section-top {
@@ -785,7 +826,7 @@ body {
 }
 
 .products-list-item:hover, .popular-partners-list-item:hover {
-    box-shadow: 0 0 4px 4px var(--basic-box-shadow);
+    box-shadow: 0 4px 20px var(--special-box-shadow);
 }
 
 .products-list-item:hover .product-buy-buttons, .popular-partners-list-item:hover .product-buy-buttons {
@@ -799,7 +840,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 210px;
+    min-height: 210px;
 }
 
 .products-list-item h3 {
@@ -850,6 +891,7 @@ body {
     background-color: var(--basic-red);
     border-radius: 3px;
     position: relative;
+    margin-bottom: 20px;
 }
 
 .product-cost-current::before {
@@ -884,6 +926,8 @@ body {
     flex-direction: column;
     padding-top: 38px;
     align-items: center;
+    background-color: var(--basic-white);
+    padding-bottom: 40px;
 }
 
 .product-buy-button {
@@ -941,8 +985,8 @@ body {
 }
 
 .in-bookmarks:active {
-    color: var(--basic-border);
-    border-color: var(--basic-border);
+    color: var(--basic-grey);
+    border-color: var(--basic-grey);
 }
 
 /* Секция "Популярные производители" */
@@ -1062,10 +1106,21 @@ body {
 .services-caption {
     padding-top: 70px;
     padding-left: 6px;
-    background-image: url("../img/services-bg.png");
     background-repeat: no-repeat;
     background-position: bottom 10px right;
     box-sizing: border-box;
+}
+
+.services-caption-delivery {
+    background-image: url("../img/services-bg.png");
+}
+
+.services-caption-guarantee {
+    background-image: url("../img/guarantee-bg.png")
+}
+
+.services-caption-credit {
+    background-image: url("../img/credit-bg.png")
 }
 
 .services-caption .section-header {
@@ -1084,6 +1139,14 @@ body {
     font-style: normal;
     font-weight: normal;
     color: var(--basic-blue-gray);
+}
+
+.services-caption p {
+    margin-bottom: 26px;
+}
+
+.send-application {
+    width: 195px;
 }
 
 .delivery-list-item {
@@ -1195,7 +1258,7 @@ body {
 
 .footer-top p {
     margin-top: 90px;
-    width: 390px;
+    width: 380px;
 }
 
 .footer-contacts-phone {
@@ -1205,7 +1268,7 @@ body {
 
 .site-navigation-list {
     margin-top: 32px;
-    width: 550px;  
+    width: 560px;  
     justify-content: space-between;
 }
 
@@ -1222,6 +1285,7 @@ body {
     color: var(--basic-background);
     text-decoration: none;
     height: 36px;
+    padding: 0 15px;
 }
 
 .site-navigation-list-item a:hover, .links-list-item a:hover {
@@ -1234,9 +1298,8 @@ body {
 }
 
 .links-list {
-    width: 550px;
-    
-    justify-content: space-around;
+    width: 560px;
+    justify-content: space-between;
     margin-bottom: 43px;
 }
 
@@ -1247,6 +1310,7 @@ body {
     height: 82px;
     color: var(--basic-gold);
     text-decoration: none;
+    padding: 0 15px;
 }
 
 /* Нижняя часть footer (темная) */
@@ -1479,19 +1543,23 @@ body {
 }
 
 .user-wrapper {
-    margin-bottom: 7px;
     display: flex;
-    flex-wrap: wrap;
+    margin-bottom: 7px;
+    max-width: 300px;
+    min-height: 45px;
 }
 
 .user {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    width: 240px;
+    box-sizing: border-box;
     padding-left: 56px;
-    padding-right: 20px;
     position: relative;
-    height: 45px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .user::before {
@@ -1516,12 +1584,12 @@ body {
 
 .unlogin {
     display: block;
-    width: 36px;
+    width: 60px;
     height: 45px;
     background-color: var(--basic-white);
     background-image: url("../img/icons/unlogin.svg");
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: center;
 }
 
 .unlogin:hover {
@@ -1675,11 +1743,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 360px;
-    height: 38px;
+    width: 400px;
+    min-height: 38px;
     align-items: center;
-    padding-right: 20px;
-    padding-left: 20px;
 }
 
 .sorting, .filter-heading, .range-controls, .price-controls input {
@@ -1690,10 +1756,11 @@ body {
  .sorting-list-item {
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    height: 38px;
     opacity: 0.3;
     text-decoration: underline dotted var(--basic-red);
-
+    padding: 0 20px;
  }
 
  .sorting-list-item:hover {
@@ -1701,14 +1768,15 @@ body {
      text-decoration: underline solid var(--basic-red);
  }
 
+ .sorting-list-item:active {
+     color: var(--basic-red);
+     text-decoration: none;
+ }
+
  .sorting-list-item-input:checked + .sorting-list-item {
     color: var(--basic-red);
     opacity: 1;
     text-decoration: none;
- }
-
- .sorting-list-item-input:focus + .sorting-list-item, .sorting-order-input:focus + label {
-    border: 1px solid var(--basic-black);
  }
 
  .sorting-order {
@@ -1887,6 +1955,10 @@ body {
     align-items: center;
 }
 
+.min-cost-label {
+    display: none;
+}
+
 .price-controls input {
     font-family: inherit;
     font-size: inherit;
@@ -1920,6 +1992,9 @@ body {
 .filter-manufacturer-list label, .filter-power-list label {
     padding-left: 35px;
     position: relative;
+    display: block;
+    height: 23px;
+    box-sizing: border-box;
 }
 
 .filter-manufacturer-list label::before {
@@ -1943,6 +2018,14 @@ body {
 }
 
 .filter-manufacturer-list input:checked:not(:disabled) + label:hover::before {
+    background-image: url("../img/icons/checkbox-on-hover.svg");
+}
+
+.filter-manufacturer-list input:focus:not(:checked) + label::before {
+    background-image: url("../img/icons/checkbox-off-hover.svg");
+}
+
+.filter-manufacturer-list input:checked:focus + label::before {
     background-image: url("../img/icons/checkbox-on-hover.svg");
 }
 
@@ -1993,16 +2076,20 @@ body {
     background-image: url("../img/icons/radio-on-hover.svg");
 }
 
+.filter-power-list input:focus:not(:checked) + label::before {
+    background-image: url("../img/icons/radio-off-hover.svg");
+}
+
+.filter-power-list input:checked:focus + label::before {
+    background-image: url("../img/icons/radio-on-hover.svg");
+}
+
 .filter-power-list input:disabled:not(:checked) + label::before  {
     background-image: url("../img/icons/radio-off-disabled.svg");
 }
 
 .filter-power-list input:checked:disabled + label::before {
     background-image: url("../img/icons/radio-on-disabled.svg");
-}
-
-.filter-manufacturer-list input:focus + label, .filter-power-list input:focus + label {
-    border: 1px solid var(--basic-black);
 }
 
 .show {

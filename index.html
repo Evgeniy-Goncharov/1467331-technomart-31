@@ -48,7 +48,7 @@
         <div class="user-info">
           <div class="user-wrapper">
             <a class="user" href="#">Равшан Джамшутович</a>
-            <a class="unlogin" href="#"></a>
+            <a class="unlogin" href="#" aria-label="Выйти из личного кабинета"></a>
           </div>
           <p>
             <a class="user-link" href="#">Мои заказы</a>
@@ -111,9 +111,7 @@
             <img src="img/gallery/perfs.jpg" alt="Строитель с большим проводным перфоратором BOSH" width="620"
               height="266">
           </figure>
-          <button class="gallery-button gallery-button-back" type="button" value="back"></button>
-          <button class="gallery-button gallery-button-next" type="button" value="next"></button>
-          <a class="button open-catalog" href="catalog.html">Открыть каталог</a>
+          
 
           <figure class="gallery-content gallery-content-2">
             <figcaption>
@@ -122,9 +120,14 @@
             </figcaption>
             <img src="img/gallery/drills.jpg" alt="Строитель с с аккумуляторной дрелью BOSH" width="620" height="266">
           </figure>
-          <button class="gallery-button gallery-button-back" type="button" value="back"></button>
-          <button class="gallery-button gallery-button-next" type="button" value="next"></button>
+
+          <button class="gallery-button gallery-button-back" type="button" value="back" aria-label="Перейти к предыдущему слайду"></button>
+          <button class="gallery-button gallery-button-next" type="button" value="next" aria-label="Перейти к следующему слайду"></button>
           <a class="button open-catalog" href="catalog.html">Открыть каталог</a>
+          <div class="slider-controls">
+            <button class="current" aria-label="Первый слайд"></button>
+            <button aria-label="Второй слайд"></button>
+          </div>
         </li>
       </ul>
 
@@ -150,8 +153,8 @@
           </a>
           <p><span class="product-cost-deleted">32500 р.</span> <span class="product-cost-current">25500 Р.</span></p>
           <div class="product-buy-buttons">
-            <button class="product-buy-button in-cart" type="button" aria-label="Довавить продукт в корзину">Купить</button>
-            <button class="product-buy-button in-bookmarks" type="button" aria-label="Довавить продукт в закладки">В закладки</button>
+            <button class="product-buy-button in-cart" type="button" aria-label="Добавить продукт в корзину">Купить</button>
+            <button class="product-buy-button in-bookmarks" type="button" aria-label="Добавить продукт в закладки">В закладки</button>
           </div>
         </li>
 
@@ -162,8 +165,8 @@
           </a>
           <p><span class="product-cost-deleted">22500 р.</span> <span class="product-cost-current">15500 Р.</span></p>
           <div class="product-buy-buttons">
-            <button class="product-buy-button in-cart" type="button" aria-label="Довавить продукт в корзину">Купить</button>
-            <button class="product-buy-button in-bookmarks" type="button" aria-label="Довавить продукт в закладки">В закладки</button>
+            <button class="product-buy-button in-cart" type="button" aria-label="Добавить продукт в корзину">Купить</button>
+            <button class="product-buy-button in-bookmarks" type="button" aria-label="Добавить продукт в закладки">В закладки</button>
           </div>
         </li>
 
@@ -174,8 +177,8 @@
           </a>
           <p><span class="product-cost-deleted">30500 р.</span> <span class="product-cost-current">25500 Р.</span></p>
           <div class="product-buy-buttons">
-            <button class="product-buy-button in-cart" type="button" aria-label="Довавить продукт в корзину">Купить</button>
-            <button class="product-buy-button in-bookmarks" type="button" aria-label="Довавить продукт в закладки">В закладки</button>
+            <button class="product-buy-button in-cart" type="button" aria-label="Добавить продукт в корзину">Купить</button>
+            <button class="product-buy-button in-bookmarks" type="button" aria-label="Добавить продукт в закладки">В закладки</button>
           </div>
         </li>
 
@@ -186,8 +189,8 @@
           </a>
           <p><span class="product-cost-deleted">22500 р.</span> <span class="product-cost-current">12500 Р.</span></p>
           <div class="product-buy-buttons">
-            <button class="product-buy-button in-cart" type="button" aria-label="Довавить продукт в корзину">Купить</button>
-            <button class="product-buy-button in-bookmarks" type="button" aria-label="Довавить продукт в закладки">В закладки</button>
+            <button class="product-buy-button in-cart" type="button" aria-label="Добавить продукт в корзину">Купить</button>
+            <button class="product-buy-button in-bookmarks" type="button" aria-label="Добавить продукт в закладки">В закладки</button>
           </div>
         </li>
       </ul>
@@ -230,11 +233,20 @@
           <li class="services-list-item" tabindex="0">Гарантия</li>
           <li class="services-list-item" tabindex="0">Кредит</li>
         </ul>
-        <div class="services-caption">
+        <div class="services-caption services-caption-delivery">
           <h3 class="section-header services-section-header">Доставка</h3>
           <p>Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно!<br> Ведь мы неплохо
             заработаем,<br>
             поднимая его на ваш этаж!</p>
+        </div>
+        <div class="services-caption services-caption-guarantee hidden">
+          <h3 class="section-header services-section-header">Гарантия</h3>
+          <p>Если купленный у нас товар поломается или заискрит,<br> а также в случае пожара, спровоцированного его<br> возгоранием,  вы всегда можете быть уверены в нашей<br> гарантии. Мы обменяем сгоревший товар на новый.<br> Дом уж восстановите как-нибудь сами.</p>
+        </div>
+        <div class="services-caption services-caption-credit hidden">
+          <h3 class="section-header services-section-header">Кредит</h3>
+          <p>Залезть в долговую яму стало проще!<br> Кредитные консультанты придут вам на помощь.</p>
+          <a class="button send-application" href="#">Отправить заявку</a>
         </div>
       </div>
     </section>
@@ -354,8 +366,8 @@
     <button class="close-modal" type="button" aria-label="Закрыть"></button>
   </aside>
 
-  <script src="js/mail.js"></script>
-  <script src="js/map.js"></script>
+  <script src="js/mail.min.js"></script>
+  <script src="js/map.min.js"></script>
 </body>
 
 </html>
